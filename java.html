@@ -11,13 +11,16 @@
 <div>
 <script>
 //object constructor
-var apple = new object();
-apple.color='red';
-apple.shape='round';
-apple.describe=function(){
-	return 'An apple is the color'+this.color+'and is the shape'+this.shape;
+function Fruit(name,color,shape){
+	this.name=name;
+	this.color=color;
+	this.shape=shape;
+	this.describe=function(){
+		return this . name + ' color  is ' + this.color  + ' and the shape is ' + this . shape;
+	}
 }
-console.log(apple.describe());
+var Apple =new Fruit('Apple','red','round');
+console.log(Apple.describe());
 </script>
 </div>
 </body>
